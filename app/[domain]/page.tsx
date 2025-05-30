@@ -1,3 +1,4 @@
+
 import { AppBskyActorDefs } from "@atproto/api"
 import { Check, X } from "lucide-react"
 
@@ -8,6 +9,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Profile } from "@/components/profile"
 import { Stage } from "@/components/stage"
+import Warning from "./warning"
 
 export function generateMetadata({ params }: { params: { domain: string } }) {
   const domain = params.domain
@@ -217,6 +219,7 @@ export default async function IndexPage({
           </p>
         </Stage>
       </div>
+      <Warning />
     </main>
   )
 }
